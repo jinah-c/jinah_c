@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+
+    <!-- 배경 이미지 프리로드 (우선순위 높게) -->
+    <link rel="preload" as="image" href="./Images/whiteplain.jpg" fetchpriority="high">
+
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- https://kristofferandreasen.github.io/wickedCSS/ -->
+    <link rel="stylesheet" href="css/wickedcss.min.css">
+
+
+
+    <!-- slick slider -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+    <!-- jQuery 먼저 로드 -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <!-- 그 다음 slick 로드 -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+<body>
+
+    
+    <header class="header">
+        <div class="header_inner">
+            <div class="logo">
+                <a href="./index.html" class="logo_link"><img src="./icon/logo.png" alt="로고"></a>
+            </div>
+
+            <div class="menu_box">
+                <a href="./profile.html" class="profile">
+                    <!-- <img src="./icon/profile.png" alt="프로필"> -->
+                    <span class="profile_name">Jinah</span>
+                </a>
+            </div>
+            <!-- <div class="hamburger" id="hamburger-1">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div> -->
+        </div>
+    </header>
+
+
+     <!-- **  .show 사이드바 노출 제어   ** -->
+    <aside class="sidebar ">
+        <button id="" class="sidebar_btn"><img src="./icon/Right.png" alt=""></button>
+        <ul class="sidebar_list">
+            <li class=""><a href="#" class="list_item home active">Home</a></li>
+            <li class=""><a href="#" class="list_item uiux ">UI·UX</a></li>
+            <li class=""><a href="#" class="list_item logo">로고</a></li>
+            <li class=""><a href="#" class="list_item package">패키지</a></li>
+            <li class=""><a href="#" class="list_item motion">모션·영상</a></li>
+            <li class=""><a href="#" class="list_item promotion">프로모션</a></li>
+            <li class=""><a href="#" class="list_item photo">사진보정</a></li>
+            <li class=""><a href="#" class="list_item etc">etc</a></li>
+        </ul>
+    </aside>
+
+
+
+    프로필 페이지입니다.
+
+   <!-- 갤러리 = 라이트박스 스크립트 로드 -->
+   <script src="./node_modules/fslightbox/index.js"></script>
+
+   <!-- AOS -->
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+   <!-- Custom JavaScript -->
+   <script src="./script.js"></script>
+
+</body>
+</html>

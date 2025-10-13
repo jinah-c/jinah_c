@@ -82,6 +82,8 @@ html.mac table {
 body {
   scroll-behavior: smooth;
   font-family: $font_lineSeed;
+  // 배경색을 먼저 설정 (이미지 로딩 전에도 보임)
+  background-color: #f5f5f0; // whiteplain.jpg와 비슷한 색상
 //   background-image: url(./Images/black-wall.jpg);
   background-image: url(./Images/whiteplain.jpg);
   background-size: cover;
@@ -168,6 +170,59 @@ section {
    }
 }
 
+/*****************************************************************
+  header
+*****************************************************************/
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: transparent;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease, backdrop-filter 0.3s ease;
+
+  // 헤더 숨김 상태
+  &.hide {
+    transform: translateY(-100%);
+  }
+
+  // 스크롤 시 나타날 때 스타일
+  &.scrolled {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .header_inner{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo{
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .profile{
+      display: flex;
+      width: 80px;
+      background-color: palegoldenrod;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+    }
+  }
+}
 
 
 
@@ -393,6 +448,18 @@ section {
 /*****************************************************************
   main
 *****************************************************************/
+  #section02{
+    margin-top: -50px;
+  }
+
+/* 1400px 이하 */
+@media (max-width: 768px) {
+
+  #section02{
+    margin-top: 0;
+  }
+}
+
 
 /* Slick slider 기본 스타일 */
 .slider {
@@ -457,9 +524,9 @@ section {
   .slider_content{
     padding: 0;
     width: 100%;
-    aspect-ratio: 1 / .8;
+    aspect-ratio: 1 / .76;
     display: flex;
-    max-height: calc( 100vh - 100px );
+    max-height: calc( 100vh - 40px );
   }
 
   .slider_img{
@@ -524,7 +591,10 @@ section {
 
 
 
-/* 갤러리 */
+/*****************************************************************
+ 갤러리
+*****************************************************************/
+
 .gallery_area{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -560,7 +630,12 @@ section {
 
 
 
-/* 동영상 */
+
+
+/*****************************************************************
+ 동영상
+*****************************************************************/
+
 .video{
     width: 100%;
     height:auto;
