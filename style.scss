@@ -12,13 +12,9 @@ html {
   font-size: 18px;
 }
 
-body {
-  scroll-behavior: smooth;
-}
-
 * {
   color: #333;
-  font-family: $font_default;
+  font-family: $font_lineSeed;
   letter-spacing: -0.01em;
   font-weight: 400;
   color: #010101;
@@ -84,12 +80,20 @@ html.mac table {
 }
 
 body {
-  font-family: $font_default;
+  scroll-behavior: smooth;
+  font-family: $font_lineSeed;
+//   background-image: url(./Images/black-wall.jpg);
+  background-image: url(./Images/whiteplain.jpg);
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 /*****************************************************************
   common
 *****************************************************************/
+
 .font2 {
   font-family: "MemomentKkukkkuk", sans-serif;
 }
@@ -99,12 +103,18 @@ section {
   border-bottom: 1px solid rgb(213, 213, 213);
 }
 
+.maxWidth{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 .content_wp {
-  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  // background-color: rgb(242, 194, 210);
   padding: 16px;
+
+
 }
 
 .flexRC {
@@ -162,23 +172,210 @@ section {
 
 
 /*****************************************************************
-  사이드바
+  sidebar
 *****************************************************************/
-.sidebar{
-  position: fixed;
-  right: 40px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 100;
-  border-radius: 12px;
-  padding: 6px 0;
+
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: translateY(1.1);
+  }
 }
 
-.sidbar_list{
-  .list_item{
+.sidebar{
+  position: fixed;
+  right: -120px;
+  top: 0;
+  width: 120px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 6px 0;
+  background-color: rgb(255 255 255 / 84%);
+  backdrop-filter: blur(4px);
+  transition: $tr2;
+}
+
+.sidebar_btn{
+    left: -56px;
+    width: 48px;
+    height: 48px;
+    background-color: #ffffffea;
+    backdrop-filter: blur(4px); 
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50px;
     display: flex;
-    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(206, 203, 228, 0.572);
+    transition: all .2s ease-in-out;
+    box-shadow: 0px 2px 5px 1px rgba(70, 71, 87, 0.1019607843);
+    z-index: 1;
+
+    img{
+      transition: opacity 0.2s ease;
+    }
+
+    &:hover img{
+      animation: bounce 0.4s ease-in-out;
+    }
+}
+
+.sidebar.show{
+    right: 0;
+    box-shadow: -2px 0 20px #4647571a;
+
+    .sidebar_btn{
+        left: -32px;
+        border-radius: 0;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        width: 32px;
+        height: 48px;
+        padding-left: 6px;
+        background-color: rgb(255 255 255 / 84%);
+        border: 1px solid rgba(233, 232, 240, 0.867);
+        border-right: 1px solid transparent;
+        padding-right: 0;
+        box-shadow: none;
+    }
+}
+
+.sidebar_list{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+  .list_item{
+    width: 84px;
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    padding: 10px 4px;
     text-align: center;
+    font-size: 14px;
+    transition: $tr2;
+    position: relative;
+    // opacity: .7;
+
+    &::after{
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            left:0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-size: contain;
+            background-position: center;
+            transition: $tr2;
+            opacity: 0;
+            transition-delay: .1s;
+    }
+
+    &:hover{
+        color: $point_color;
+        padding-left: 24px;
+        opacity: 1;
+    }
+
+    &:hover::after{
+        opacity: 1;
+        left: 0;
+    }
+
+    &.home:hover::after{
+        background-image: url(./icon/type-home2.svg);
+    }
+    &.uiux:hover::after{
+        background-image: url(./icon/type-mobile.svg);
+    }
+    &.logo:hover::after{
+        background-image: url(./icon/type-logo.svg);
+    }
+    &.package:hover::after{
+        background-image: url(./icon/type-package.svg);
+    }
+    &.motion:hover::after{
+        background-image: url(./icon/type-motion.svg);
+    }
+    &.promotion:hover::after{
+        background-image: url(./icon/type-promotion.svg);
+    }
+    &.photo:hover::after{
+        background-image: url(./icon/type-photo.svg);
+    }
+    &.etc:hover::after{
+        background-image: url(./icon/type-etc.svg);
+    }
+
+    &.active{
+        color: $point_color;
+        padding-left: 24px;
+        text-decoration: underline;
+        opacity: 1;
+
+        &::after{
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            left:0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-size: contain;
+            background-position: center;
+            opacity: 1;
+            display: block;
+        }
+    }  
+
+    
+    &.home.active::after{
+        background-image: url(./icon/type-home2.svg);
+    }
+    &.uiux.active::after{
+        background-image: url(./icon/type-mobile.svg);
+    }
+    &.logo.active::after{
+        background-image: url(./icon/type-logo.svg);
+    }
+    &.package.active::after{
+        background-image: url(./icon/type-package.svg);
+    }
+    &.motion.active::after{
+        background-image: url(./icon/type-motion.svg);
+    }
+    &.promotion.active::after{
+        background-image: url(./icon/type-promotion.svg);
+    }
+    &.photo.active::after{
+        background-image: url(./icon/type-photo.svg);
+    }
+    &.etc.active::after{
+        background-image: url(./icon/type-etc.svg);
+    }
+    // &::after{
+    //     content: '';
+    //     position: absolute;
+    //     top: 50%;    
+    //     left: 0;
+    //     width: 10px;
+    //     height: 10px;
+    //     transform: translateY(-50%);
+
+    //     background-color: $point_color;
+    //     transition: $tr2;
+    // }
   }
 }
 
@@ -187,7 +384,7 @@ section {
 @media (max-width: 1400px) {
 
   .sidebar{
-    background-color: #ffffffb2;
+    background-color: rgb(255 255 255 / 84%);
   }
 }
 
@@ -343,7 +540,6 @@ section {
       width: 100%;
       height: 100%;
        object-fit: cover;
-        overflow: hidden;
         object-position: center;
     }
   }

@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+
+    <!-- 배경 이미지 프리로드 -->
+    <link rel="preload" as="image" href="./Images/whiteplain.jpg">
+
+    <link rel="stylesheet" href="./home.css">
 
     <!-- https://kristofferandreasen.github.io/wickedCSS/ -->
     <link rel="stylesheet" href="css/wickedcss.min.css">
@@ -27,23 +31,33 @@
 
 </head>
 <body>
-    <aside class="sidebar">
-        <ul class="sidbar_list">
-            <li class=""><a href="#section01" class="list_item" data-target="section1">맨위로</a></li>
-            <li class=""><a href="#section02" class="list_item" data-target="section2">섹션2</a></li>
-            <li class=""><a href="#section03" class="list_item" data-target="section3">섹션3</a></li>
-            <li class=""><a href="#section04" class="list_item" data-target="section4">섹션4</a></li>
-            <li class=""><a href="#section05" class="list_item" data-target="section5">섹션5</a></li>
+    
+    <header class="header">
+        
+    </header>
+
+
+     <!-- **  .show 사이드바 노출 제어   ** -->
+    <aside class="sidebar show">
+        <button id="" class="sidebar_btn"><img src="./icon/Right.png" alt=""></button>
+        <ul class="sidebar_list">
+            <li class=""><a href="#" class="list_item home active">Home</a></li>
+            <li class=""><a href="#" class="list_item uiux ">UI·UX</a></li>
+            <li class=""><a href="#" class="list_item logo">로고</a></li>
+            <li class=""><a href="#" class="list_item package">패키지</a></li>
+            <li class=""><a href="#" class="list_item motion">모션·영상</a></li>
+            <li class=""><a href="#" class="list_item promotion">프로모션</a></li>
+            <li class=""><a href="#" class="list_item photo">사진보정</a></li>
+            <li class=""><a href="#" class="list_item etc">etc</a></li>
         </ul>
     </aside>
-    <section id="section01">
-        <div class="content_wp main_title flexCC">
-            <h1 class="point_title" data-aos="fade-up" data-aos-easing="linear">Hello World</h1>
-            <p data-aos="fade-up" data-aos-easing="linear">Hello World</p>
-        </div>
-    </section>
 
-   <section data-aos="fade-up" data-aos-easing="linear" id="section02">
+
+    <!-- ********************* -->
+    <!-- **  메인슬라이드 배너  ** -->
+    <!-- ********************* -->
+    
+   <section data-aos="fade-up" data-aos-duration="300" id="section02">
     <div class="content_wp flexCC p0">
         <!-- Slider main container -->
         <div class="slider main_slider">
@@ -84,41 +98,55 @@
 
 
 
+       
+    <!-- ********************* -->
+    <!-- **  페이지 타이틀?     ** -->
+    <!-- ********************* -->
+    <section id="section01">
+        <div class="content_wp maxWidth main_title flexCC">
+            <h1 class="point_title" data-aos="fade-up" data-aos-duration="300">Hello World</h1>
+            <p data-aos="fade-up" data-aos-duration="300">Hello World</p>
+        </div>
+    </section>
+
+
    
-   <!-- 갤러리 -->
-   <section data-aos="fade-up" data-aos-easing="linear" id="section03">
+    <!-- ********************* -->
+    <!-- **  갤러리           ** -->
+    <!-- ********************* -->
+   <section data-aos="fade-up" data-aos-duration="300" id="section03">
     <div class="sec_tit_center">
         <div class="wiggle">pppp</div>
     </div>
    
-    <div class="content_wp flexCC">
+    <div class="content_wp maxWidth flexCC">
 
         <div class="gallery_area">
-             <a data-aos="fade-up" data-aos-easing="linear" data-fslightbox="gallery" href="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA3MDFfMTg1%2FMDAxNjg4MTQyMzUyNjg3.wdRnBE0wXRLQnG8Z16FSbB6VC6zjuFWX_3QGfpwjWwYg.-xBZT9_O6wmmMpu-a8DQ6ppTxHls7Lrgfq77AXz7VcIg.JPEG.hyena613%2F20230630%25A3%25DF134152.jpg&type=sc960_832" class="gallery_item">
+             <a data-aos="fade-up" data-aos-duration="300" data-fslightbox="gallery" href="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA3MDFfMTg1%2FMDAxNjg4MTQyMzUyNjg3.wdRnBE0wXRLQnG8Z16FSbB6VC6zjuFWX_3QGfpwjWwYg.-xBZT9_O6wmmMpu-a8DQ6ppTxHls7Lrgfq77AXz7VcIg.JPEG.hyena613%2F20230630%25A3%25DF134152.jpg&type=sc960_832" class="gallery_item">
                 <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA3MDFfMTg1%2FMDAxNjg4MTQyMzUyNjg3.wdRnBE0wXRLQnG8Z16FSbB6VC6zjuFWX_3QGfpwjWwYg.-xBZT9_O6wmmMpu-a8DQ6ppTxHls7Lrgfq77AXz7VcIg.JPEG.hyena613%2F20230630%25A3%25DF134152.jpg&type=sc960_832" alt="">
             </a>
-            <a data-aos="fade-up" data-aos-easing="linear" data-fslightbox="gallery" href="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEyMjdfOTMg%2FMDAxNzM1MjY5NTc2Nzc5.eOJpoLrd-pW2yapIKkr04mM9uY592nwfwMSjs25hXTQg.w0dK2CWlF78iXLFxm1z810UM9vIq84Ug_MlQz285bY8g.JPEG%2F900%25A3%25DFDSC07611.JPG&type=sc960_832" class="gallery_item" >
+            <a data-aos="fade-up" data-aos-duration="300" data-fslightbox="gallery" href="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEyMjdfOTMg%2FMDAxNzM1MjY5NTc2Nzc5.eOJpoLrd-pW2yapIKkr04mM9uY592nwfwMSjs25hXTQg.w0dK2CWlF78iXLFxm1z810UM9vIq84Ug_MlQz285bY8g.JPEG%2F900%25A3%25DFDSC07611.JPG&type=sc960_832" class="gallery_item" >
                 <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEyMjdfOTMg%2FMDAxNzM1MjY5NTc2Nzc5.eOJpoLrd-pW2yapIKkr04mM9uY592nwfwMSjs25hXTQg.w0dK2CWlF78iXLFxm1z810UM9vIq84Ug_MlQz285bY8g.JPEG%2F900%25A3%25DFDSC07611.JPG&type=sc960_832" alt="">
             </a>
-            <a data-aos="fade-up" data-aos-easing="linear" data-fslightbox="gallery" href=".https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA5MjRfNiAg%2FMDAxNzI3MTcwODM5NjI4.-1YlsOdGNGuLlVtcAlr8D7aeQydrfX8d7DuGakv0uvcg.zxyupYW0wk5Etz3JiLgCEe2mlbsiWY6p0Mk44Ixj4XUg.PNG%2F%25B6%25C7%25C5%25B8%25C0%25C7_50%25B0%25A1%25C1%25F6_%25B9%25CC%25BD%25BA%25C5%25CD%25B8%25AE_%25B6%25F3%25B5%25F0%25BF%25C0_%25C3%25D6%25C1%25BE%25BA%25BB_v02%25280924%2529.mp4_000393393.png&type=sc960_832" class="gallery_item" >
+            <a data-aos="fade-up" data-aos-duration="300" data-fslightbox="gallery" href=".https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA5MjRfNiAg%2FMDAxNzI3MTcwODM5NjI4.-1YlsOdGNGuLlVtcAlr8D7aeQydrfX8d7DuGakv0uvcg.zxyupYW0wk5Etz3JiLgCEe2mlbsiWY6p0Mk44Ixj4XUg.PNG%2F%25B6%25C7%25C5%25B8%25C0%25C7_50%25B0%25A1%25C1%25F6_%25B9%25CC%25BD%25BA%25C5%25CD%25B8%25AE_%25B6%25F3%25B5%25F0%25BF%25C0_%25C3%25D6%25C1%25BE%25BA%25BB_v02%25280924%2529.mp4_000393393.png&type=sc960_832" class="gallery_item" >
                 <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA5MjRfNiAg%2FMDAxNzI3MTcwODM5NjI4.-1YlsOdGNGuLlVtcAlr8D7aeQydrfX8d7DuGakv0uvcg.zxyupYW0wk5Etz3JiLgCEe2mlbsiWY6p0Mk44Ixj4XUg.PNG%2F%25B6%25C7%25C5%25B8%25C0%25C7_50%25B0%25A1%25C1%25F6_%25B9%25CC%25BD%25BA%25C5%25CD%25B8%25AE_%25B6%25F3%25B5%25F0%25BF%25C0_%25C3%25D6%25C1%25BE%25BA%25BB_v02%25280924%2529.mp4_000393393.png&type=sc960_832" alt="">
             </a>
-            <a data-aos="fade-up" data-aos-easing="linear" data-fslightbox="gallery" href="./Images/02.png" class="gallery_item" >
+            <a data-aos="fade-up" data-aos-duration="300" data-fslightbox="gallery" href="./Images/02.png" class="gallery_item" >
                 <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimage.nmv.naver.net%2Fblog_2024_10_31_1319%2FL8q5yPJ0Nc_01.jpg&type=sc960_832" alt="">
             </a>
-            <a data-aos="fade-up" data-aos-easing="linear" data-fslightbox="gallery" href="./Images/02.png" class="gallery_item" >
+            <a data-aos="fade-up" data-aos-duration="300" data-fslightbox="gallery" href="./Images/02.png" class="gallery_item" >
                 <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAxMTdfMjI0%2FMDAxNjEwODk1MTkyOTA0._pFORoDr4OOsOCfLDUfP8Sf0ftOkxCFlJ2WM7jflSl0g.CAIt3DW1n78UI_HcRENMPvx87CTqcaEIlADqkrYEyBkg.JPEG.rongcho_15%2Foutput_2828821986.jpg&type=sc960_832" alt="">
             </a>
-            <a data-aos="fade-up" data-aos-easing="linear" data-fslightbox="gallery" href="./Images/02.png" class="gallery_item" >
+            <a data-aos="fade-up" data-aos-duration="300" data-fslightbox="gallery" href="./Images/02.png" class="gallery_item" >
                 <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F003%2F2021%2F10%2F15%2FNISI20211014_0000846880_web_20211014174149_20211015060208054.jpg&type=sc960_832" alt="">
             </a>
-            <a data-aos="fade-up" data-aos-easing="linear" data-fslightbox="gallery" href="./Images/02.png" class="gallery_item" >
+            <a data-aos="fade-up" data-aos-duration="300" data-fslightbox="gallery" href="./Images/02.png" class="gallery_item" >
                 <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MjRfNDAg%2FMDAxNjUwNzk0OTY5MDY1.ylgdEbK3euOR5uk6pp18tLzkRLysm1P1gseYu2g3U_Mg.9SxOty0cXZIRrBQK3WQcdOV66mDqan7xjMeQi5Amwtgg.JPEG.cheon_song0049%2F20220424%25A3%25DF185141.jpg&type=sc960_832" alt="">
             </a>
-            <a data-aos="fade-up" data-aos-easing="linear" data-fslightbox="gallery" href="./Images/02.png" class="gallery_item" >
+            <a data-aos="fade-up" data-aos-duration="300" data-fslightbox="gallery" href="./Images/02.png" class="gallery_item" >
                 <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MjRfNDAg%2FMDAxNjUwNzk0OTY5MDY1.ylgdEbK3euOR5uk6pp18tLzkRLysm1P1gseYu2g3U_Mg.9SxOty0cXZIRrBQK3WQcdOV66mDqan7xjMeQi5Amwtgg.JPEG.cheon_song0049%2F20220424%25A3%25DF185141.jpg&type=sc960_832" alt="">
             </a>
-            <a data-aos="fade-up" data-aos-easing="linear" data-fslightbox="gallery" href="./Images/02.png" class="gallery_item" >
+            <a data-aos="fade-up" data-aos-duration="300" data-fslightbox="gallery" href="./Images/02.png" class="gallery_item" >
                 <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MjRfNDAg%2FMDAxNjUwNzk0OTY5MDY1.ylgdEbK3euOR5uk6pp18tLzkRLysm1P1gseYu2g3U_Mg.9SxOty0cXZIRrBQK3WQcdOV66mDqan7xjMeQi5Amwtgg.JPEG.cheon_song0049%2F20220424%25A3%25DF185141.jpg&type=sc960_832" alt="">
             </a>
         </div>
@@ -126,12 +154,14 @@
    </section>
 
 
-   
+    <!-- ********************* -->
+    <!-- **  지도            ** -->
+    <!-- ********************* -->
     <section id="section04">
-        <div class="content_wp">
+        <div class="content_wp maxWidth">
             <!-- * 카카오맵 - 지도퍼가기 -->
             <!-- 1. 지도 노드 -->
-            <div data-aos="fade-up" data-aos-easing="linear" id="daumRoughmapContainer1758701759710" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+            <div data-aos="fade-up" data-aos-duration="300" id="daumRoughmapContainer1758701759710" class="root_daum_roughmap root_daum_roughmap_landing"></div>
         </div>
 
         <!-- 2. 설치 스크립트  -->
@@ -148,10 +178,15 @@
     </section>
 
 
+
+
+    <!-- ********************* -->
+    <!-- **  영상            ** -->
+    <!-- ********************* -->
      <section id="section05">
-    <div class="content_wp flexCC">
-        <h2 data-aos="fade-up" data-aos-easing="linear">유튜브동영상</h2>
-        <div class="gallery_area" data-aos="fade-up" data-aos-easing="linear">
+    <div class="content_wp maxWidth flexCC">
+        <h2 data-aos="fade-up" data-aos-duration="300">유튜브동영상</h2>
+        <div class="gallery_area" data-aos="fade-up" data-aos-duration="300">
             <a data-fslightbox="gallery" href="https://www.youtube.com/watch?v=3nQNiWdeH2Q">
                 <img src="./Images/04.png" alt="" style="width: 200px; height: 150px; object-fit: cover; margin: 10px;">
             </a>
@@ -160,12 +195,12 @@
         <br><br>
 
         <!-- 영상으로 삽입 -->
-        <video data-aos="fade-up" data-aos-easing="linear" src="./Images/SLW_SeoulSubway.mp4" controls class="video" ></video>
+        <video data-aos="fade-up" data-aos-duration="300" src="./Images/SLW_SeoulSubway.mp4" controls class="video" ></video>
         
         <br><br>
 
         <!-- 유튜브 링크로 삽입 -->
-         <iframe data-aos="fade-up" data-aos-easing="linear" class="youtube_video" src="https://www.youtube.com/embed/yy2HYB5DRww?si=SQGrHDNnoHPjgHS8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+         <iframe data-aos="fade-up" data-aos-duration="300" class="youtube_video" src="https://www.youtube.com/embed/yy2HYB5DRww?si=SQGrHDNnoHPjgHS8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 
     
@@ -177,6 +212,11 @@
    <!-- 갤러리 = 라이트박스 스크립트 로드 -->
    <script src="./node_modules/fslightbox/index.js"></script>
    
+ <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
    <!-- Slick slider setting -->
    <script>
@@ -184,7 +224,7 @@
            // Slick 초기화
            $('.slider').slick({
                autoplay: true,
-               autoplaySpeed: 50000, // 5초로 변경
+               autoplaySpeed: 7000, // 5초로 변경
                arrows: false, // 기본 화살표 숨김 (커스텀 버튼 사용할 경우)
                dots: false, // 기본 dots 비활성화
                // infinite: true,
@@ -229,59 +269,61 @@
                 $('.custom-dot[data-slide="' + nextSlide + '"]').addClass('active');
             });
         });
-    </script>
 
-    <!-- AOS -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
+  $(".hamburger").click(function(){
+    $(this).toggleClass("is-active");
+  });
     </script>
+   
 
-    <!-- 페이지 로드 시 맨 위로 스크롤 -->
-    <script>
+<!-- 페이지 로드 시 맨 위로 스크롤 -->
+<script>
         window.addEventListener('load', function() {
             window.scrollTo(0, 0);
         });
-
         // 새로고침 시에도 맨 위로 스크롤
         if ('scrollRestoration' in history) {
             history.scrollRestoration = 'manual';
         }
-
         window.addEventListener('beforeunload', function() {
             window.scrollTo(0, 0);
         });
-    </script>
 
-    <!-- 사이드바 활성화 -->
-    <script>
-        // 모든 섹션과 메뉴 링크 선택
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.sidbar_list a');
+     // 사이드바와 토글 버튼 요소 선택
+    const sidebar = document.querySelector('.sidebar');
+    const sidebarBtn = document.querySelector('.sidebar button.sidebar_btn');
+    const btnImg = sidebarBtn.querySelector('img');
 
-        // Intersection Observer 설정
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // 현재 보이는 섹션의 id 가져오기
-                    const id = entry.target.id;
+    // 토글 버튼 클릭 이벤트
+    sidebarBtn.addEventListener('click', () => {
+    // .show 클래스 토글
+    sidebar.classList.toggle('show');
 
-                    // 모든 메뉴에서 빨간색 제거
-                    navLinks.forEach(link => link.style.color = '');
+    // 페이드 아웃 후 아이콘 변경하고 페이드 인
+    btnImg.style.opacity = '0';
 
-                    // 해당 섹션의 메뉴에 빨간색 적용
-                    const activeLink = document.querySelector(`.sidbar_list a[href="#${id}"]`);
-                    if (activeLink) {
-                        activeLink.style.color = 'red';
-                    }
-                }
-            });
-        }, {
-            threshold: 0.3 // 섹션의 30%가 보일 때 활성화
-        });
+    setTimeout(() => {
+        // 현재 상태에 따라 아이콘 변경
+        if (sidebar.classList.contains('show')) {
+            // 사이드바가 열려있을 때
+            btnImg.src = './icon/close.svg';
+        } else {
+            // 사이드바가 닫혀있을 때
+            btnImg.src = './icon/menu.svg';
+        }
+        // 페이드 인
+        btnImg.style.opacity = '1';
+    }, 200);
+    });
 
-        // 모든 섹션 관찰 시작
-        sections.forEach(section => observer.observe(section));
-    </script>
+    // 초기 상태 설정 (선택사항)
+    // 페이지 로드 시 현재 상태에 맞는 아이콘 설정
+    if (sidebar.classList.contains('show')) {
+    btnImg.src = './icon/close.svg';
+    } else {
+    btnImg.src = './icon/menu.svg';
+    }
+</script>
+
 </body>
 </html>
