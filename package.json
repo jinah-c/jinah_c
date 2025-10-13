@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "fslightbox": "^3.7.4",
+    "photoswipe": "^5.4.4"
+  }
+}

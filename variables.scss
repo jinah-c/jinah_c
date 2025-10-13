@@ -1,0 +1,63 @@
+
+@font-face {
+  font-family: 'MemomentKkukkkuk';
+  src: url('./font/memomentKkukkkuk.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'LineSeed';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Th.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LineSeed';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Rg.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LineSeed';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MapoHanaeum';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoPeacefullA.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IncheonEducationHimchan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/iceHimchan-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+
+
+$font_default: 'IncheonEducationHimchan', sans-serif;
+$font_point: 'MemomentKkukkkuk', sans-serif;
+$font_lineSeed: 'LineSeed', sans-serif;
+
+
+
+$tr2: all .2s ease-in-out;
+$tr3: all .3s ease-in-out;
+$tr4: all .4s ease-in-out;
+$tr5: all .5s ease-in-out;
+
+
+$point_color: #F3248C;
+$sub_color: #535353;
+$bg_color: #F7F7F7;
+$light_bg_color: #FFFFFF;
+$border_color: #E1E1E1;
+$shadow_color: rgba(0, 0, 0, 0.1);

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .roller{
+            position: relative;
+            width: 100%;
+            height: 48px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            font-weight: 700;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .roller .rolltext{
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            animation: rolltext 7s infinite;
+        }
+
+        .roller .rolltext .txt{
+            font-size: 30px;
+            height: 48px;
+        }
+
+        @keyframes rolltext{
+        0% {
+          transform: translateY(0);
+        }
+        25% {
+          transform: translateY(-48px);
+        }
+        50% {
+          transform: translateY(-96px);
+        }
+        75% {
+          transform: translateY(-144px);
+        }
+      }
+
+    </style>
+</head>
+<body>
+    <div class="roller">
+        <div class="rolltext">
+            <div class="txt">🤣</div>
+            <div class="txt">🥲🥲</div>
+            <div class="txt">😂😂😂</div>
+            <div class="txt">🤬🤬🤬🤬</div>
+        </div>
+    </div>
+</body>
+</html>

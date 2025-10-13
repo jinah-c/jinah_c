@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+
+# CSS Maps (optional - 생성된 파일이므로 제외할 수 있음)
+*.css.map
+
+# Large video files
+*.mp4
